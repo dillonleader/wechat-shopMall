@@ -1,0 +1,34 @@
+<view class="search-content">
+<view class="search-box">
+    <view class="search">
+      <image src="/images/search.png"></image>
+      <input class="weui-input" auto-focus placeholder="搜索商品" bindconfirm="EnterSearch" value="{{keyword}}"/>
+    </view>
+    <text class="cancel" bindtap="cancel">取消</text>
+</view>
+
+<view class="notYet" wx:if="{{status==false}}">
+  <image src="/images/noYet.png"></image>
+  <text>暂没有数据喔，搜一搜吧</text>
+</view>
+
+<!-- 搜索列表 -->
+<view class="search-item">
+  <view class="item-list" wx:for="{{goodInfoList}}" bindtap="goodInfo" data-id="{{item.item_id}}" data-title="{{item.title}}">
+    <image src="{{item.pict_url}}"></image>
+    <view class="item-info">
+      <text class="title">{{item.title}}</text>
+      <text class="price">
+        <text>￥</text>
+        <text>{{item.reserve_price}}</text>
+      </text>
+      <view class="address">{{item.provcity}}</view>
+        <view class="shopp-type">{{item.level_one_category_name}}</view>
+        <view class="shop">
+          <text>{{item.nick}}</text>
+          <view>详情 ></view>
+        </view>
+    </view>
+  </view>
+</view>
+</view>

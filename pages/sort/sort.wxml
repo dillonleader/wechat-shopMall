@@ -1,0 +1,21 @@
+<view class="sort-content">
+<!-- 搜索 -->
+<view class="search-box">
+  <view class="search" bindtap="jumpPage">
+      <image src="/images/search.png"></image>
+      <text>搜索商品</text>
+  </view>
+</view>
+<!-- 分类列表 -->
+<view class="sort-item">
+    <view class="left-item">
+         <text wx:for="{{goodList}}"  class="nav-item {{id == item.id ? 'active' : ''}}" bindtap="activeon" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}</text>
+      </view>
+    <view class="right-item">
+       <view class="item-recom" wx:for="{{ goodInfoList }}" bindtap="goodInfo"  data-id="{{item.item_id}}">
+         <image src="{{item.pict_url}}" alt="暂无数据"></image>
+         <text>{{ item.short_title }}</text>
+       </view>
+    </view>
+</view>
+</view>

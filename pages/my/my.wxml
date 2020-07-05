@@ -1,0 +1,94 @@
+<view class="my-content">
+<view class="login">
+    <view class="login-ico">
+        <image src="{{imgUrl}}"></image>
+        
+        <button wx:if="{{!hasUserInfo}}" style="width:172rpx" class="signIn" open-type="getUserInfo" bindgetuserinfo="signIn" >点击登录</button>
+        <block wx:elif="{{hasUserInfo}}">
+          <view class="nackName">用户：{{userInfo.nickName}}</view>
+        </block>
+    </view>
+</view>
+<!-- 操作一层 -->
+<view class="operation">
+    <view class="unified tobe">
+        <view class="tobePaid">
+          <image src="/images/tobePaid.png"></image>
+          <text>待付款</text>
+        </view>
+        <view class="tobeReced">
+          <image src="/images/tobeReced.png"></image>
+          <text>待收货</text>
+        </view>
+        <view class="tobeEval">
+          <image src="/images/tobeEval.png"></image>
+          <text>待评价</text>
+        </view>
+        <view class="returnEx">
+          <image src="/images/returnEx.png"></image>
+          <text>退换/售后</text>
+        </view>
+        <view class="allOrder">
+          <image src="/images/allOrder.png"></image>
+          <text>全部订单</text>
+        </view>
+    </view>
+</view>
+
+<!-- 操作二层 -->
+<view class="operation">
+    <view class="unified tobe">
+        <view class="tobePaid">
+          <image src="/images/coupon.png"></image>
+          <text>优惠卷</text>
+        </view>
+        <view class="tobeReced">
+          <image src="/images/collection.png"></image>
+          <text>商品收藏</text>
+        </view>
+        <view class="tobeEval">
+          <image src="/images/visitor.png"></image>
+          <text>历史浏览</text>
+        </view>
+        <view class="refund">
+          <image src="/images/address.png"></image>
+          <text>我的地址</text>
+        </view>
+        <view class="myEval">
+          <image src="/images/myEval.png"></image>
+          <text>我的评价</text>
+        </view>
+    </view>
+</view>
+
+<!-- 操作三层 -->
+<view class="other">
+    <view class="nav-list">
+      <image class="onLogo" src="/images/wallet.png"></image>
+      <view class="goTarget">
+        <view>我的钱包</view>
+        <image class="arrow" src="/images/arrow.png"></image>
+      </view>
+    </view>
+    <view class="nav-list">
+      <image class="onLogo" src="/images/about.png"></image>
+      <view class="goTarget">
+        <view>关于我们</view>
+        <image class="arrow" src="/images/arrow.png"></image>
+      </view>
+    </view>
+    <view class="nav-list">
+      <image class="onLogo" src="/images/setting.png"></image>
+      <view class="goTarget">
+        <view>设置</view>
+        <image class="arrow" src="/images/arrow.png"></image>
+      </view>
+    </view>
+         <navigator hover-class="none" open-type="exit" target="miniProgram" class="signOut">关闭小程序</navigator>
+    <text class="copy">
+        Copyright © 2020 Author: Dillon.Leader
+        MyBlog: http://www.dillonl.cn
+        MyMusic: http://www.dillonl.cn:3334
+    </text>
+</view>
+</view>

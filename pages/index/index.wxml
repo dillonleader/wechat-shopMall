@@ -1,0 +1,50 @@
+<view class="index-content">
+<!-- 导航 -->
+    <view class="page-section">
+      <view class="page-section-spacing">
+        <scroll-view class="scroll-view_H" wx:for="{{goodList}}">
+          <view class="scroll-item {{id == item.id ? 'active' : ''}}" bindtap="activeon" data-id="{{item.id}}" data-name="{{item.name}}">{{item.name}}</view>
+        </scroll-view>
+      </view>
+    </view>
+<!-- 轮播图 -->
+     <view class="page-section page-section-spacing swiper">
+      <swiper class="page-swiper" indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true">
+        <block wx:for="{{dataImg}}" wx:key="*this">
+          <swiper-item>
+           		<image src="{{item.img}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+<!-- 公告 -->
+    <view class="roll-swiper">
+    <view class="notice">公告：</view>
+      <swiper autoplay="autoplay" interval="2000" duration="500" vertical="true" circular="true">
+        <block>
+          <swiper-item class="roll-txt">
+            <view class="swiper-item">天气较热，注意防暑</view>
+          </swiper-item>
+           <swiper-item class="roll-txt">
+            <view class="swiper-item">Author: Dillon.Leader</view>
+          </swiper-item>
+          <swiper-item class="roll-txt">
+            <view class="swiper-item">MyBlog: http://www.dillonl.cn</view>
+          </swiper-item>
+          <swiper-item class="roll-txt">
+            <view class="swiper-item">MyMusic: http://www.dillonl.cn:3334</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+<!-- 商品列表 -->
+<view class="goosInfo">
+	<view wx:for="{{goodInfoList}}" class="info" bindtap="goodInfo" data-id="{{item.item_id}}" data-title="{{item.title}}">
+		<image src="{{item.pict_url}}"></image>
+		<view class="title"><text>{{item.title}}</text></view>
+		<text class="price">￥{{item.zk_final_price}}</text>
+    <text class="address">{{item.provcity}}</text>
+	</view>
+</view>
+</view>

@@ -1,0 +1,109 @@
+<view class="details-content">
+<view class="pic-details">
+  <view class="swiper-out">
+      <swiper class="page-swiper" autoplay="true" interval="3000" duration="500" circular="true">
+        <block wx:for="{{goodDetail.small_images.string}}" wx:key="*this">
+          <swiper-item>
+           		<image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="pri-adress">
+      <text class="status">￥</text>
+      <text class="price">{{goodDetail.reserve_price}}</text>
+      <view class="address">{{goodDetail.provcity}}</view>
+    </view>
+
+    <text class="title" data-title="{{goodDetail.title}}">
+      {{goodDetail.title}}
+    </text>
+</view>
+
+<!-- 产品参数 -->
+<text class="product-param">产品参数</text>
+<view class="goodType">
+  <view class="typeItem">
+    <text class="cut">类型</text>
+    <text class="cut-name">{{goodDetail.cat_leaf_name}}</text>
+  </view>
+  <view class="typeItem">
+    <text class="cut">类别</text>
+    <text class="cut-name">{{goodDetail.cat_name}}</text>
+  </view>
+  <view class="typeItem">
+    <text class="cut">店铺</text>
+    <text class="cut-name">{{goodDetail.nick}}</text>
+  </view>
+  <view class="typeItem">
+    <text class="cut">优惠</text>
+    <text class="cut-name">￥{{goodDetail.zk_final_price}}</text>
+  </view>
+</view>
+
+<!-- 图文详情 -->
+	<view class="recomm-logo">
+		<view></view>
+		<text>图文介绍</text>
+		<view></view>
+	</view>
+
+  <view class="grap-detail">
+  <image wx:for="{{goodDetail.small_images.string}}" src="{{item}}"></image>
+  </view>
+
+<!-- 底部购物 -->
+<view class="bottom-fixed" wx:if="{{status == false}}">
+  <view class="out-shop">
+    <view class="lf-logo">
+      <view>
+        <image class="onLogo" src="/images/wallet.png"></image>
+        <text>钱包</text>
+      </view>
+      <view>
+        <image class="onLogo" src="/images/about.png"></image>
+        <text>我们</text>
+      </view>
+      <view bindtap="shoppCat">
+        <image class="onLogo" src="/images/details-shoppCat.png"></image>
+        <text>购物车</text>
+      </view>
+    </view>
+    <view class="rh-shopp">
+        <view class="addShoppCat" catchtap="addShoppCat">加入购物车</view>
+        <view class="buyNow" bindtap="buyNoe">立即购买</view>
+    </view>
+  </view>
+</view>
+
+<!-- 遮罩，加入购物车 -->
+<view class="modality" wx:else  bindtap="blankHide">
+    <view class="addModa" catchtap="moda">
+        <view class="addDetail">
+          <view class="top-deta">
+            <image src="{{goodDetail.small_images.string[0]}}"></image>
+            <view class="txt">
+              <view class="txt-title">{{goodDetail.title}}</view>
+              <view class="addPrice">
+                <text>￥</text>
+                <text>{{goodDetail.reserve_price}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- 数量 -->
+        <view class="num-model">
+          <view class="num-txt">数量</view>
+          <view class="add-sub">
+            <view bindtap="subNum" class="sub-num {{numVal <= 1?'active':''}}">-</view>
+            <view class="shopp-num">{{numVal}}</view>
+            <view class="add-num" bindtap="addNum">+</view>
+          </view>
+        </view>
+        <!-- 确定 -->
+        <view class="sure" bindtap="sure" data-id="{{goodDetail.num_iid}}" wx:if="{{define== false}}">确定</view>
+        <view class="sure" bindtap="sureTo" data-id="{{goodDetail.num_iid}}" wx:else>确定</view>
+    </view>
+</view>
+</view>

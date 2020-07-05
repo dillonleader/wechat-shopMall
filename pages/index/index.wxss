@@ -1,0 +1,110 @@
+.page-section-spacing{
+   display: flex;
+   overflow-y: scroll;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.scroll-view_H{
+  white-space: nowrap;
+  padding: 20rpx 30rpx;
+}
+.scroll-item{
+  display: block;
+  width: 40rpx;
+  font-size: 24rpx;
+  padding: 10rpx 18rpx 10rpx 0;
+  font-size: 28rpx;
+  background-color: #fff;
+  border-bottom: 2px solid transparent;
+}
+.active{
+  border-bottom: 2px solid #c9251b;
+  color: #c9251b;
+}
+.page-section-spacing{
+  width: 100%;
+}
+.page-swiper{
+  width: 100%;
+  height: 200px;
+}
+.page-swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+
+.roll-swiper{
+  width: 100%;
+  height: 40rpx;
+  margin: 20rpx 0;
+  font-size: 24rpx;
+}
+.notice{
+  padding-left: 20rpx;
+  width: 90rpx;
+  float: left;
+  line-height: 40rpx;
+  color: #a5a4a4;
+}
+.roll-swiper>swiper{
+  float: left;
+  line-height: 40rpx;
+  width: 80%;
+  height: 100%;
+}
+.swiper-item{
+  color: #c9251b;
+}
+
+
+.goosInfo{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.info{
+  width: 350rpx;
+  height: 400rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10px #cacaca;
+  padding-bottom: 10rpx;
+}
+.info>image{
+  width: 100%;
+  height: 290rpx;
+}
+.price{
+  color: #cf2c2c;
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 10rpx;
+}
+.title{
+  font-size: 24rpx;
+  color: #333;
+  height: 56rpx;
+  line-height: 30rpx;
+  margin-bottom: 15rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 0 20rpx;
+}
+.address{
+   float: right;
+   font-size: 10px;
+   color: #6b6b6b;
+   line-height: 45rpx;
+   padding-right: 10px;
+}
+.price,.address{
+  padding-bottom: 10rpx;
+}

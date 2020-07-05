@@ -1,0 +1,168 @@
+.my-content {
+  background-color: #f0f0f0;
+}
+
+.login {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  background-color: #fd574f;
+}
+
+.login-ico {
+  width: 180rpx;
+  height: 280rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-ico image {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+}
+
+.signIn {
+  text-align: center;
+  margin: 20rpx auto;
+  /* width: 100rpx; */
+  padding: 12rpx 36rpx;
+  font-size: 22rpx;
+  background-color: rgba(0, 0, 0, 0.432);
+  color: #ffffff;
+  border-radius: 30rpx;
+}
+.nackName{
+  margin-top: 10rpx;
+  text-align: center;
+  color: #fff;
+
+}
+
+
+/* 操作 */
+.operation {
+  width: 100%;
+  height: 160rpx;
+  margin: 30rpx 0;
+  background-color: #fff;
+}
+
+.unified {
+  width: 90%;
+  height: auto;
+}
+
+.tobe {
+  margin: 25rpx auto;
+  padding-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tobe image {
+  margin: 0 auto;
+  display: block;
+  width: 55rpx;
+  height: 55rpx;
+}
+
+.tobe text {
+  display: block;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+}
+
+.returnEx image {
+  width: 55rpx;
+  height: 43rpx;
+  margin-top: 10rpx;
+}
+
+.returnEx text,
+.allOrder text {
+  margin-top: 23rpx;
+}
+
+.allOrder image {
+  width: 43rpx;
+  height: 43rpx;
+  margin-top: 10rpx;
+}
+
+.myEval image {
+  width: 55rpx;
+  height: 55rpx;
+}
+
+
+
+
+
+
+.other {
+  width: 100%;
+  height: 200rpx;
+  margin: 20rpx auto;
+  background-color: #fff;
+}
+.nav-list{
+  height: 120rpx;
+}
+.goTarget,
+.onLogo {
+  display: block;
+  float: left;
+}
+
+.arrow {
+  display: block;
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 40rpx;
+  padding-right: 20rpx;
+}
+.goTarget view{
+  float: left;
+  line-height: 133rpx;
+}
+.onLogo{
+  width: 40rpx;
+  height: 40rpx;
+  padding-left: 50rpx;
+  margin-top: 47rpx;
+}
+.goTarget{
+  height: 100%;
+  width: 85%;
+  margin-left: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.signOut{
+  width: 85%;
+  height: 80rpx;
+  margin: 25rpx auto;
+  text-align: center;
+  line-height: 80rpx;
+  border: 1px solid #ff2424;
+  color: #ff2424;
+  border-radius: 50rpx;
+  font-weight: 700;
+}
+.navigator-hover {
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  }
+  
+.copy{
+  display: block;
+  text-align: center;
+  color: #d4d4d4;
+  font-size: 24rpx;
+  padding: 30rpx 0;
+}

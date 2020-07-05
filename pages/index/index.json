@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText":"Mall购物",
+  "navigationBarBackgroundColor": "#c9251b",
+  "navigationBarTextStyle":"white",
+  "loading":true
+}

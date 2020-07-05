@@ -1,0 +1,90 @@
+<view class="shopcat-content">
+	<view class="none-shoppcat" wx:if="{{status==false}}">
+		<view class="posi-item">
+			<image src="/images/no-cat.png"></image>
+			<text>购物车空空如也，快去逛逛吧~</text>
+		</view>
+	</view>
+
+	<!-- 购物车列表 -->
+	<view class="shoppCatDetails" wx:else>
+		<view class="opera-posi">
+			<view class="opera">
+				<image src="/images/opera.png"></image>
+				<text>{{location}}</text>
+			</view>
+			<view class="posi">编辑</view>
+		</view>
+		<!-- 列表 -->
+		<view class="shop-list">
+			<view class="shop-items" wx:for="{{shopList}}">
+				<view class="check">
+					<checkbox color="#ff1000"/>
+				</view>
+				<view class="shop-details">
+					<view class="store">
+						<view class="shop-store">
+							<image src="/images/shop.png"></image>
+							<text>{{item.shop}}</text>
+						</view>
+						<view class="freight">
+							<image src="/images/about.png"></image>
+							<text>已免运费</text>
+						</view>
+					</view>
+					<view class="details-txt">
+						<image class="deta-price" src="{{item.img}}"></image>
+						<view class="rh-details">
+							<view class="rh-title">{{item.title}}</view>
+							<view class="catsType"><text>{{item.catName}}</text></view>
+							<view class="catsType place"><text>{{item.provcity}}</text></view>
+							<view class="price-addSub">
+								<view class="cat-price">
+									<text>￥</text>
+									<text>{{item.price}}</text>
+								</view>
+								<view class="add-sub">
+									<view bindtap="subNum" class="sub-num {{numVal <= 1?'active':''}}">-</view>
+									<view class="shopp-num">{{item.numVal}}</view>
+									<view class="add-num" bindtap="addNum">+</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 购买 -->
+		<view class="purchase">
+			<checkbox-group>
+				<checkbox></checkbox>
+				<label>全选</label>
+			</checkbox-group>
+			<view class="settlement">
+				<view class="total">总计：</view>
+				<view class="total-price">
+					<text>￥</text>
+					<text>0.00</text>
+				</view>
+				<view class="accound">
+					去结算(<text>0</text>)
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="recomm-logo">
+		<view></view>
+		<text>可能你想要</text>
+		<view></view>
+	</view>
+	<!-- 推荐 -->
+	<view class="recommend">
+		<view wx:for="{{goodInfoList}}" class="info" bindtap="goodInfo" data-id="{{item.item_id}}" data-title="{{item.title}}">
+			<image src="{{item.pict_url}}" class="pics"></image>
+			<view class="title"><text>{{item.title}}</text></view>
+			<text class="price">￥{{item.zk_final_price}}</text>
+			<image class="shoppCat" src="/images/shop-cat.png"></image>
+		</view>
+	</view>
+</view>
